@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Master</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="">
+    <header>
+        <h1 class="my-9 text-4xl font-bold text-center text-blue-500">Money Master💰</h1>
+    </header>
+
+    <main class="mx-20 mb-9">
+        <div class="grid grid-cols-2 gap-20">
+            <div>
+                <img src="./images/main.png" class="w-full">
+            </div>
+
+            <div class="p-4 bg-gray-100">
+                <div class="flex flex-col items-center gap-5">
+                    <h3 class="text-xl font-semibold">Income</h3>
+
+                    <div class="grid grid-cols-3 gap-4 items-center">
+                        <p class="text-end">Income : </p>
+                        <div class="col-span-2">
+                            <input class="w-full bg-[#dadde2] rounded p-1 px-2" type="text" name="" id="income">
+                            <p class="text-red-500"></p>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-semibold">Expenses</h3>
+
+                    <div class="grid grid-cols-3 gap-4 items-center">
+                        <p class="text-end">Food : </p>
+                        <div class="col-span-2">
+                            <input class="w-full bg-[#dadde2] rounded p-1 px-2" type="text" name="" id="food">
+                            <p class="text-red-500"></p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-3 gap-4 items-center">
+                        <p class="text-end">Rent : </p>
+                        <div class="col-span-2">
+                            <input class="w-full bg-[#dadde2] rounded p-1 px-2" type="text" name="" id="rent">
+                            <p class="text-red-500"></p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-3 gap-4 items-center">
+                        <p class="text-end">Cloths : </p>
+                        <div class="col-span-2">
+                            <input class="w-full bg-[#dadde2] rounded p-1 px-2" type="text" name="" id="cloth">
+                            <p class="text-red-500"></p>
+                        </div>
+                    </div>
+
+                    <button id="calculate-btn"
+                        class="bg-blue-500 text-white py-3 px-6 rounded font-semibold">Calculate</button>
+
+
+                    <h3 class="text-xl font-semibold">Total Expencess: <span id="total-expence"></span></h3>
+
+                    <h3 class="text-xl font-semibold">Balance: <span id="balance"></span></h3>
+
+                    <div class="flex gap-4 items-center">
+                        <p class="text-end whitespace-nowrap">Save : </p>
+                        <input class="w-16 bg-[#dadde2] rounded p-1 px-6" type="text" name="" id="save">
+                        <p>%</p>
+                        <button id="calculate-btn"
+                            class="bg-blue-500 text-white p-1 px-6 rounded font-semibold">Save</button>
+                    </div>
+
+                    <h3 class="text-xl font-semibold">Saving Amount: <span id="save-amount"></span></h3>
+
+                    <h3 class="text-xl font-semibold">Remaining Balance: <span id="remain-balance"></span></h3>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
