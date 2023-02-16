@@ -17,6 +17,25 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
     setInnerText('balance', income - sumOfExpences);
 });
 
+document.getElementById('save-btn').addEventListener('click', function () {
+    const save = getValue('save');
+    const income = getValue('income');
+    const balance = parseFloat(document.getElementById('balance').innerText);
+
+    if (!save) {
+        return;
+    }
+    if (save >= 100) {
+        alert('Can not save whole income or more');
+        return;
+    }
+
+    const savingAmount = (save / 100) * income;
+
+    setInnerText('save-amount', savingAmount);
+    setInnerText('remain-balance', balance - savingAmount);
+});
+
 function getValue(id) {
     const value = parseFloat(document.getElementById(id).value);
     if (isNaN(value) || value < 0) {
