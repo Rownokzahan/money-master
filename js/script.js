@@ -30,7 +30,12 @@ document.getElementById('save-btn').addEventListener('click', function () {
         return;
     }
 
-    const savingAmount = (save / 100) * income;
+    const savingAmount = ((save / 100) * income).toFixed(2);
+
+    if (savingAmount > balance){
+        alert('Can not save more than balance');
+        return;
+    }
 
     setInnerText('save-amount', savingAmount);
     setInnerText('remain-balance', balance - savingAmount);
